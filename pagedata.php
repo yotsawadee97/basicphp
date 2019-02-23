@@ -86,6 +86,7 @@ h6 {
             <a class="nav-link" href="data.csv" download>Download CSV </a>
         </li>
         </ul>
+
         <?php 
             $name = $_POST["name"];
             $email = $_POST["email"];
@@ -94,7 +95,7 @@ h6 {
         ?>
     </div>
     </nav>
-    <div class="container" style="font-size:28px">  
+    <div class="container">  
     <?php
         $file = fopen(basename($_FILES["fileToUpload"]["name"]),"r");
         $stdID = array();
