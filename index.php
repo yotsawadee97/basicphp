@@ -97,7 +97,7 @@ function test_input($data) {
 
 <h1>Calculate  maximum, minimum and mean</h1>
 
-<form enctype="multipart/form-data" action="pagedata.php" method="post"
+<form enctype="multipart/form-data" method="post" 
   <?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
   <div class="container">  
     <div class="form-group">
@@ -125,15 +125,27 @@ function test_input($data) {
       <input type="text" class="form-control" name="email"  aria-describedby="emailHelp" placeholder="Enter email">
       <span class="error"> <?php echo $emailErr;?></span>
     </div>
-    <span class="input-group-text">
-      <input type="file" name ="fileToUpload" accept=".csv">
-    </span>
-    <span type="submit" class="btn btn-dark">
+
       <input type="submit" class="btn btn-dark" value="SUBMIT">
-    </span>
-    
+
   </div>  
 </form>
+
+<form action = "pagedata.php">
+  <div class="container">  
+  
+    <span class="input-group-text" action="pagedata.php">
+      <input type="file" name ="fileToUpload" accept=".csv">
+    </span>
+    
+    <span type="submit" class="btn btn-dark">
+      <input type="submit" class="btn btn-dark" value="UPLOAD">
+    </span>
+
+  </div>  
+</form>
+
+  
 
 
 <?php
